@@ -18,9 +18,9 @@
 
 package se.maxk.diga;
 
+import java.io.InputStream;
 import se.maxk.diga.model.DigaCodeValidationResponse;
 import se.maxk.diga.model.DigaInvoiceResponse;
-import java.io.InputStream;
 
 /** Reads decrypted raw XML request/response bodies and outputs more readable Java objects. */
 public interface DigaXmlRequestReader {

@@ -21,14 +21,14 @@ package se.maxk.diga.implementation;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import se.maxk.diga.DigaCodeValidationException;
-import se.maxk.diga.DigaHealthInsuranceDirectory;
-import se.maxk.diga.model.DigaBillingInformation;
-import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 import java.math.BigInteger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import se.maxk.diga.DigaCodeValidationException;
+import se.maxk.diga.DigaHealthInsuranceDirectory;
+import se.maxk.diga.model.DigaBillingInformation;
+import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 
 class DigaCodeDefaultParserTest {
   private DigaHealthInsuranceDirectory healthInsuranceDirectory;

@@ -18,15 +18,6 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaUtils;
-import se.maxk.diga.DigaXmlRequestWriter;
-import se.maxk.diga.DigaXmlWriterException;
-import se.maxk.diga.model.*;
-import se.maxk.diga.model.generatedxml.billing.*;
-import se.maxk.diga.model.generatedxml.codevalidation.NachrichtentypStp;
-import se.maxk.diga.model.generatedxml.codevalidation.ObjectFactory;
-import se.maxk.diga.model.generatedxml.codevalidation.PruefungFreischaltcode;
-import se.maxk.diga.model.generatedxml.codevalidation.VerfahrenskennungStp;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -42,7 +33,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
+import se.maxk.diga.DigaUtils;
+import se.maxk.diga.DigaXmlRequestWriter;
+import se.maxk.diga.DigaXmlWriterException;
 import se.maxk.diga.model.*;
+import se.maxk.diga.model.generatedxml.billing.*;
+import se.maxk.diga.model.generatedxml.codevalidation.NachrichtentypStp;
+import se.maxk.diga.model.generatedxml.codevalidation.ObjectFactory;
+import se.maxk.diga.model.generatedxml.codevalidation.PruefungFreischaltcode;
+import se.maxk.diga.model.generatedxml.codevalidation.VerfahrenskennungStp;
 
 /** An XML writer using JAXB. Depends on XML Schemas (.xsd) located in main/resources/*-xsd/ */
 @Slf4j
@@ -57,8 +56,7 @@ public class DigaXmlJaxbRequestWriter implements DigaXmlRequestWriter {
 
   private JAXBContext codeContext;
   private Marshaller codeMarshaller;
-  private se.maxk.diga.model.generatedxml.codevalidation.ObjectFactory
-      codeObjectFactory;
+  private se.maxk.diga.model.generatedxml.codevalidation.ObjectFactory codeObjectFactory;
 
   private JAXBContext billingContext;
   private Marshaller billingMarshaller;
@@ -132,7 +130,7 @@ public class DigaXmlJaxbRequestWriter implements DigaXmlRequestWriter {
 
   @Override
   public byte[] createInvoiceCorrectionRequest(
-          DigaCorrectionInvoice digaCorrectionInvoice, DigaBillingInformation billingInformation)
+      DigaCorrectionInvoice digaCorrectionInvoice, DigaBillingInformation billingInformation)
       throws DigaXmlWriterException {
     try {
 

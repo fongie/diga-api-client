@@ -18,7 +18,6 @@
 
 package se.maxk.diga;
 
-import se.maxk.diga.model.*;
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import org.junit.jupiter.api.Assertions;

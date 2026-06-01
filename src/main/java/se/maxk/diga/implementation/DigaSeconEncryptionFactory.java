@@ -18,13 +18,13 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaEncryptionFactory;
-import se.maxk.diga.model.DigaDecryption;
-import se.maxk.diga.model.DigaEncryption;
 import de.tk.opensource.secon.*;
 import java.io.ByteArrayInputStream;
 import lombok.Builder;
 import lombok.NonNull;
+import se.maxk.diga.DigaEncryptionFactory;
+import se.maxk.diga.model.DigaDecryption;
+import se.maxk.diga.model.DigaEncryption;
 
 /** A {@link DigaEncryptionFactory} implemented using the {@link SECON} library. */
 public class DigaSeconEncryptionFactory implements DigaEncryptionFactory {

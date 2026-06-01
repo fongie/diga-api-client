@@ -18,15 +18,6 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaXmlReaderException;
-import se.maxk.diga.DigaXmlRequestReader;
-import se.maxk.diga.model.*;
-import se.maxk.diga.model.generatedxml.billingreport.MessageType;
-import se.maxk.diga.model.generatedxml.billingreport.Report;
-import se.maxk.diga.model.generatedxml.billingreport.ResourceType;
-import se.maxk.diga.model.generatedxml.billingreport.ValidationStepResultType;
-import se.maxk.diga.model.generatedxml.codevalidation.NachrichtentypStp;
-import se.maxk.diga.model.generatedxml.codevalidation.PruefungFreischaltcode;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -41,7 +32,15 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
+import se.maxk.diga.DigaXmlReaderException;
+import se.maxk.diga.DigaXmlRequestReader;
 import se.maxk.diga.model.*;
+import se.maxk.diga.model.generatedxml.billingreport.MessageType;
+import se.maxk.diga.model.generatedxml.billingreport.Report;
+import se.maxk.diga.model.generatedxml.billingreport.ResourceType;
+import se.maxk.diga.model.generatedxml.billingreport.ValidationStepResultType;
+import se.maxk.diga.model.generatedxml.codevalidation.NachrichtentypStp;
+import se.maxk.diga.model.generatedxml.codevalidation.PruefungFreischaltcode;
 
 /** A XML reader using JAXB. Depends on XML Schemas (.xsd) located in main/resources/*-xsd/ */
 @Slf4j

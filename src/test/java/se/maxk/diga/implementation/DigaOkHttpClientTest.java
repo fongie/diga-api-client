@@ -18,7 +18,6 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaHttpClientException;
 import java.security.KeyStore;
 import java.util.Optional;
 import javax.net.ssl.X509ExtendedTrustManager;
@@ -27,6 +26,7 @@ import okhttp3.OkHttpClient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import se.maxk.diga.DigaHttpClientException;
 
 class DigaOkHttpClientTest {
   private OkHttpClient okHttpClient;

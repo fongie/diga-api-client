@@ -18,10 +18,6 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaXmlWriterException;
-import se.maxk.diga.model.*;
-import se.maxk.diga.model.generatedxml.billing.CrossIndustryInvoiceType;
-import se.maxk.diga.model.generatedxml.billing.ObjectFactory;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
@@ -31,7 +27,10 @@ import java.math.BigDecimal;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import se.maxk.diga.DigaXmlWriterException;
 import se.maxk.diga.model.*;
+import se.maxk.diga.model.generatedxml.billing.CrossIndustryInvoiceType;
+import se.maxk.diga.model.generatedxml.billing.ObjectFactory;
 
 class DigaXmlJaxbRequestWriterTest {
   private DigaXmlJaxbRequestWriter writer;

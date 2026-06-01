@@ -18,7 +18,6 @@
 
 package se.maxk.diga.model;
 
-import se.maxk.diga.DigaEncryptionException;
 import de.tk.opensource.secon.SECON;
 import de.tk.opensource.secon.SeconException;
 import de.tk.opensource.secon.Subscriber;
@@ -28,6 +27,7 @@ import java.io.IOException;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
+import se.maxk.diga.DigaEncryptionException;
 
 /** Attempt to encrypt an inputstream using SECON */
 @Builder

@@ -18,15 +18,15 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaHealthInsuranceDirectory;
-import se.maxk.diga.model.generatedxml.codevalidation.KostentraegerMappingverzeichnis;
-import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.stream.Collectors;
+import se.maxk.diga.DigaHealthInsuranceDirectory;
+import se.maxk.diga.model.generatedxml.codevalidation.KostentraegerMappingverzeichnis;
+import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 
 /**
  * Unmarshals the contents of the health insurance data mapping file provided by gkv at

@@ -18,11 +18,6 @@
 
 package se.maxk.diga.implementation;
 
-import se.maxk.diga.DigaHttpClient;
-import se.maxk.diga.DigaHttpClientException;
-import se.maxk.diga.DigaUtils;
-import se.maxk.diga.model.DigaApiHttpRequest;
-import se.maxk.diga.model.DigaApiHttpResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -35,6 +30,11 @@ import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import nl.altindag.ssl.SSLFactory;
 import okhttp3.*;
+import se.maxk.diga.DigaHttpClient;
+import se.maxk.diga.DigaHttpClientException;
+import se.maxk.diga.DigaUtils;
+import se.maxk.diga.model.DigaApiHttpRequest;
+import se.maxk.diga.model.DigaApiHttpResponse;
 
 /**
  * Default HTTP client using OkHttp configured to trust the insurance company certificates and

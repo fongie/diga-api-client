@@ -23,8 +23,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import se.maxk.diga.DigaXmlReaderException;
-import se.maxk.diga.model.generatedxml.billingreport.Report;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
 import java.io.ByteArrayInputStream;
@@ -33,6 +31,8 @@ import java.nio.charset.StandardCharsets;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import se.maxk.diga.DigaXmlReaderException;
+import se.maxk.diga.model.generatedxml.billingreport.Report;
 
 class DigaXmlJaxbRequestReaderTest {
   private static final String sampleCodeValidationAnswer =

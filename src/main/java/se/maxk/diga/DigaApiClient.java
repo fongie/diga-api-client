@@ -18,8 +18,6 @@
 
 package se.maxk.diga;
 
-import se.maxk.diga.implementation.*;
-import se.maxk.diga.model.*;
 import de.tk.opensource.secon.SeconException;
 import jakarta.xml.bind.JAXBException;
 import java.io.ByteArrayInputStream;

@@ -18,15 +18,15 @@
 
 package se.maxk.diga.implementation;
 
+import de.bitmarck.bms.base32.Base32Check1;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import se.maxk.diga.DigaCodeParser;
 import se.maxk.diga.DigaCodeValidationException;
 import se.maxk.diga.DigaHealthInsuranceDirectory;
 import se.maxk.diga.model.DigaBillingInformation;
 import se.maxk.diga.model.DigaCodeInformation;
 import se.maxk.diga.model.DigaInvoiceMethod;
-import de.bitmarck.bms.base32.Base32Check1;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 
 /** Parses a DiGA Code */
 @AllArgsConstructor
