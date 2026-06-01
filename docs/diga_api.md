@@ -432,7 +432,7 @@ Request headers:
 <details><summary>Raw response Data:</summary>
 
 ```xml
-</rep:report>➜  diga-api-client git:(add_documentation_for_verification_api) ✗  cd /Users/srehfeldt/Desktop/repositories/diga-api-client ; /usr/bin/env /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:50207 -Dfile.encoding=UTF-8 @/var/folders/_4/lksyvn0153z0m0hsy9mbc_540000gn/T/cp_55eo6njelbopyxv5n2td61jnl.argfile com.alextherapeutics.diga.Main 
+</rep:report>➜  diga-api-client git:(add_documentation_for_verification_api) ✗  cd /Users/srehfeldt/Desktop/repositories/diga-api-client ; /usr/bin/env /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:50207 -Dfile.encoding=UTF-8 @/var/folders/_4/lksyvn0153z0m0hsy9mbc_540000gn/T/cp_55eo6njelbopyxv5n2td61jnl.argfile se.maxk.diga.Main 
 12:37:29.872 [main] DEBUG nl.altindag.ssl.trustmanager.CompositeX509ExtendedTrustManager - Received the following server certificate: [CN=*.bitmarck-daten.de]
 12:37:39.590 [main] DEBUG nl.altindag.ssl.trustmanager.CompositeX509ExtendedTrustManager - Received the following server certificate: [CN=*.bitmarck-daten.de]<rep:report xmlns:html="http://www.w3.org/1999/xhtml" xmlns:in="http://www.xoev.de/de/validator/framework/1/createreportinput" xmlns:rep="http://www.xoev.de/de/validator/varl/1" xmlns:s="http://www.xoev.de/de/validator/framework/1/scenarios" xmlns:svrl="http://purl.oclc.org/dsdl/svrl" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" varlVersion="1.0.0" valid="false">
     <rep:engine>

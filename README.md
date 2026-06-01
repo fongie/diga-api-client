@@ -20,6 +20,12 @@ All contributions are welcome, we do not expect you to commit code if you do not
 
 Currently, the client is stable and working against all insurance endpoints!
 
+### Group ID Change
+
+Until version 2.1.3, this project was developed under the organization Alex Therapeutics, with group id com.alextherapeutics.
+
+This organization is no longer active and the group id has been changed to `se.maxk`. By request to not continue using the com.alextherapeutics domain, the imports have also changed, which is a breaking change that was published in version `3.0.0`.
+
 ## Get Started
 
 To communicate with the DiGA api companies **must request an IK number and certificates for encryption**.
@@ -41,9 +47,9 @@ Please see the [docs](docs/diga_api.md#Requesting-an-IK-number) folder for more 
 Import it using Maven in your `pom.xml`:
 ```xml
 <dependency>
-    <groupId>com.alextherapeutics</groupId>
+    <groupId>se.maxk</groupId>
     <artifactId>diga-api-client</artifactId>
-    <version>2.1.2</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 It is also uploaded to Github packages if you wish to use that
@@ -235,10 +241,10 @@ A: According to a Bitmarck service employee this is normal (state of 30.04.2021)
 
 ## Maintainers
 
-This project is currently maintained by the developer team at [Alex Therapeutics](https://www.alextherapeutics.com/), a Swedish company that develops software medical devices. Contact [max@alextherapeutics.se](mailto:max@alextherapeutics.com) for inquiries which do not belong on Github. If you or your company wishes to help maintain this project, please let us know.
+This project is currently maintained by [Max Körlinge](https://maxk.se). Contact [max@maxk.se](mailto:max@maxk.se) for inquiries which do not belong on Github. If you or your company wishes to help maintain this project, please let me know.
 
 ## License
 
-Distributed under the [Apache-2.0](LICENSE) license. Copyright is held by Alex Therapeutics AB and individual contributors.
+Distributed under the [Apache-2.0](LICENSE) license. Copyright is held by Alex Therapeutics AB until 2026, Max Körlinge from 2026, and individual contributors.
 
 XML schema files (.xsd) are copied from other repositories and retain their original license and copyright terms. You can find that information and where the files were taken from in the header of each individual file.
