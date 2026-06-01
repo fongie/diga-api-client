@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.alextherapeutics</groupId>
+    <groupId>se.maxk</groupId>
     <artifactId>diga-api-client</artifactId>
 <!--    the version is replaced in a github action on creating a release with the github release number-->
     <version>0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>DiGA API Client</name>
-    <url>https://github.com/alex-therapeutics/diga-api-client</url>
+    <url>https://github.com/fongie/diga-api-client</url>
     <description>
         Java library for DiGA (Digital Health Application) manufacturers to integrate with the DiGA API endpoints for code validation and billing.
     </description>
@@ -25,17 +25,16 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/alextherapeutics/diga-api-client.git</connection>
-        <developerConnection>scm:git:git://github.com/alextherapeutics/diga-api-client.git</developerConnection>
-        <url>https://github.com/alex-therapeutics/diga-api-client</url>
+        <connection>scm:git:git://github.com/fongie/diga-api-client.git</connection>
+        <developerConnection>scm:git:git://github.com/fongie/diga-api-client.git</developerConnection>
+        <url>https://github.com/fongie/diga-api-client</url>
     </scm>
 
     <developers>
         <developer>
             <name>Max Körlinge</name>
-            <email>max@alextherapeutics.com</email>
-            <organization>Alex Therapeutics</organization>
-            <organizationUrl>https://github.com/alex-therapeutics</organizationUrl>
+            <email>max@maxk.se</email>
+            <url>https://maxk.se</url>
             <roles>
                 <role>Maintainer</role>
             </roles>
@@ -143,15 +142,15 @@
                             <xsdOptions>
                                 <xsdOption>
                                     <xsdDir>${basedir}/src/main/resources/code-xsd/</xsdDir>
-                                    <packagename>com.alextherapeutics.diga.model.generatedxml.codevalidation</packagename>
+                                    <packagename>se.maxk.diga.model.generatedxml.codevalidation</packagename>
                                 </xsdOption>
                                 <xsdOption>
                                     <xsdDir>${basedir}/src/main/resources/billing-xsd/</xsdDir>
-                                    <packagename>com.alextherapeutics.diga.model.generatedxml.billing</packagename>
+                                    <packagename>se.maxk.diga.model.generatedxml.billing</packagename>
                                 </xsdOption>
                                 <xsdOption>
                                     <xsdDir>${basedir}/src/main/resources/billing-report-xsd/</xsdDir>
-                                    <packagename>com.alextherapeutics.diga.model.generatedxml.billingreport</packagename>
+                                    <packagename>se.maxk.diga.model.generatedxml.billingreport</packagename>
                                     <extensionArgs>-XautoNameResolution</extensionArgs>
                                 </xsdOption>
                             </xsdOptions>
@@ -193,7 +192,7 @@
         <repository>
             <id>github</id>
             <name>Github Packages</name>
-            <url>https://maven.pkg.github.com/alex-therapeutics/diga-api-client</url>
+            <url>https://maven.pkg.github.com/fongie/diga-api-client</url>
         </repository>
     </distributionManagement>
 
