@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ * Copyright 2021-2026 Alex Therapeutics AB and individual contributors. Copyright 2026- Max Körlinge and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@
 package se.maxk.diga.implementation;
 
 import se.maxk.diga.DigaHealthInsuranceDirectory;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.KostentraegerMappingverzeichnis;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
+import se.maxk.diga.model.generatedxml.codevalidation.KostentraegerMappingverzeichnis;
+import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;

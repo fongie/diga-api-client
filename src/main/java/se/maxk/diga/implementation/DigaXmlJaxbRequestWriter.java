@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ * Copyright 2021-2026 Alex Therapeutics AB and individual contributors. Copyright 2026- Max Körlinge and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +21,12 @@ package se.maxk.diga.implementation;
 import se.maxk.diga.DigaUtils;
 import se.maxk.diga.DigaXmlRequestWriter;
 import se.maxk.diga.DigaXmlWriterException;
-import com.alextherapeutics.diga.model.*;
-import com.alextherapeutics.diga.model.generatedxml.billing.*;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.NachrichtentypStp;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.ObjectFactory;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.PruefungFreischaltcode;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.VerfahrenskennungStp;
+import se.maxk.diga.model.*;
+import se.maxk.diga.model.generatedxml.billing.*;
+import se.maxk.diga.model.generatedxml.codevalidation.NachrichtentypStp;
+import se.maxk.diga.model.generatedxml.codevalidation.ObjectFactory;
+import se.maxk.diga.model.generatedxml.codevalidation.PruefungFreischaltcode;
+import se.maxk.diga.model.generatedxml.codevalidation.VerfahrenskennungStp;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -57,12 +57,12 @@ public class DigaXmlJaxbRequestWriter implements DigaXmlRequestWriter {
 
   private JAXBContext codeContext;
   private Marshaller codeMarshaller;
-  private com.alextherapeutics.diga.model.generatedxml.codevalidation.ObjectFactory
+  private se.maxk.diga.model.generatedxml.codevalidation.ObjectFactory
       codeObjectFactory;
 
   private JAXBContext billingContext;
   private Marshaller billingMarshaller;
-  private com.alextherapeutics.diga.model.generatedxml.billing.ObjectFactory billingObjectFactory;
+  private se.maxk.diga.model.generatedxml.billing.ObjectFactory billingObjectFactory;
 
   @Builder
   public DigaXmlJaxbRequestWriter(@NonNull DigaInformation digaInformation) throws JAXBException {
@@ -160,7 +160,7 @@ public class DigaXmlJaxbRequestWriter implements DigaXmlRequestWriter {
     codeMarshaller = codeContext.createMarshaller();
     codeMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-    billingObjectFactory = new com.alextherapeutics.diga.model.generatedxml.billing.ObjectFactory();
+    billingObjectFactory = new se.maxk.diga.model.generatedxml.billing.ObjectFactory();
     billingContext = JAXBContext.newInstance(CrossIndustryInvoiceType.class);
     billingMarshaller = billingContext.createMarshaller();
     billingMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

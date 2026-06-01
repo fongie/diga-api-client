@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ * Copyright 2021-2026 Alex Therapeutics AB and individual contributors. Copyright 2026- Max Körlinge and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,9 +19,9 @@
 package se.maxk.diga.implementation;
 
 import se.maxk.diga.DigaXmlWriterException;
-import com.alextherapeutics.diga.model.*;
-import com.alextherapeutics.diga.model.generatedxml.billing.CrossIndustryInvoiceType;
-import com.alextherapeutics.diga.model.generatedxml.billing.ObjectFactory;
+import se.maxk.diga.model.*;
+import se.maxk.diga.model.generatedxml.billing.CrossIndustryInvoiceType;
+import se.maxk.diga.model.generatedxml.billing.ObjectFactory;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;

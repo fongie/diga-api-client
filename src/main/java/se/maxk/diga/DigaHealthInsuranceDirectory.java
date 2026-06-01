@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ * Copyright 2021-2026 Alex Therapeutics AB and individual contributors. Copyright 2026- Max Körlinge and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 
 package se.maxk.diga;
 
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
+import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 
 /**
  * Contains the information located in the health insurance data mapping file provided by gkv at

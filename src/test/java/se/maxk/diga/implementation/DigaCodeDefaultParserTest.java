@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2021 Alex Therapeutics AB and individual contributors.
+ * Copyright 2021-2026 Alex Therapeutics AB and individual contributors. Copyright 2026- Max Körlinge and individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import se.maxk.diga.DigaCodeValidationException;
 import se.maxk.diga.DigaHealthInsuranceDirectory;
 import se.maxk.diga.model.DigaBillingInformation;
-import com.alextherapeutics.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
+import se.maxk.diga.model.generatedxml.codevalidation.KrankenkasseninformationCtp;
 import java.math.BigInteger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
