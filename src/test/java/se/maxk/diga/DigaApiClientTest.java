@@ -107,16 +107,13 @@ class DigaApiClientTest {
       throws DigaEncryptionException, DigaXmlWriterException, DigaCodeValidationException {
     var codeInfo = Mockito.mock(DigaCodeInformation.class);
     Mockito.when(codeParser.parseCodeForValidation(Mockito.anyString())).thenReturn(codeInfo);
-    Mockito.when(codeInfo.getInsuranceCompanyIKNumber()).thenReturn("IK123456789");
-    Mockito.when(codeInfo.getClearingCenterIKNumber()).thenReturn("IK123456789");
+    setupAbstractDigaInsuranceInformationGetInsuranceCompanyIKAnd1MoreStubs(codeInfo);
     var xmlRequest = new byte[] {5, 6};
     Mockito.when(xmlRequestWriter.createCodeValidationRequest(Mockito.any()))
         .thenReturn(xmlRequest);
     var encrBuild = Mockito.mock(DigaEncryption.DigaEncryptionBuilder.class, Mockito.RETURNS_SELF);
     var encr = Mockito.mock(DigaEncryption.class);
-    Mockito.when(encryptionFactory.newEncryption()).thenReturn(encrBuild);
-    Mockito.when(encrBuild.build()).thenReturn(encr);
-    Mockito.when(encr.encrypt()).thenThrow(DigaEncryptionException.class);
+    setupDigaEncryptionEncryptAndNewEncryptionAndBuildStubs(encrBuild, encr);
 
     var resp = client.validateDigaCode("my-code");
     Assertions.assertTrue(resp.isHasError());
@@ -132,16 +129,13 @@ class DigaApiClientTest {
         DigaInvoice.builder().invoiceId("1").validatedDigaCode("code").digavEid("12345000").build();
     var info = Mockito.mock(DigaBillingInformation.class);
     Mockito.when(codeParser.parseCodeForBilling(Mockito.anyString())).thenReturn(info);
-    Mockito.when(info.getInsuranceCompanyIKNumber()).thenReturn("IK123456789");
-    Mockito.when(info.getClearingCenterIKNumber()).thenReturn("IK123456789");
+    setupAbstractDigaInsuranceInformationGetInsuranceCompanyIKAnd1MoreStubs(info);
     Mockito.when(info.getBuyerInvoicingMethod()).thenReturn(DigaInvoiceMethod.API);
     var xmlRequest = new byte[] {5, 6};
     Mockito.when(xmlRequestWriter.createBillingRequest(invoice, info)).thenReturn(xmlRequest);
     var encrBuild = Mockito.mock(DigaEncryption.DigaEncryptionBuilder.class, Mockito.RETURNS_SELF);
     var encr = Mockito.mock(DigaEncryption.class);
-    Mockito.when(encryptionFactory.newEncryption()).thenReturn(encrBuild);
-    Mockito.when(encrBuild.build()).thenReturn(encr);
-    Mockito.when(encr.encrypt()).thenThrow(DigaEncryptionException.class);
+    setupDigaEncryptionEncryptAndNewEncryptionAndBuildStubs(encrBuild, encr);
 
     var resp = client.invoiceDiga(invoice);
     Assertions.assertTrue(resp.isHasError());
@@ -172,5 +166,20 @@ class DigaApiClientTest {
     Assertions.assertEquals(email, resp.getInsuranceCompanyInvoiceEmail());
     Assertions.assertEquals(generatedInvoice, resp.getGeneratedInvoice());
     Mockito.verifyNoInteractions(httpClient, encryptionFactory, xmlRequestReader);
+  }
+
+  private void setupDigaEncryptionEncryptAndNewEncryptionAndBuildStubs(
+      DigaEncryption.DigaEncryptionBuilder encrBuild, DigaEncryption encr)
+      throws DigaEncryptionException, DigaXmlWriterException, DigaCodeValidationException {
+    Mockito.when(encryptionFactory.newEncryption()).thenReturn(encrBuild);
+    Mockito.when(encrBuild.build()).thenReturn(encr);
+    Mockito.when(encr.encrypt()).thenThrow(DigaEncryptionException.class);
+  }
+
+  private void setupAbstractDigaInsuranceInformationGetInsuranceCompanyIKAnd1MoreStubs(
+      AbstractDigaInsuranceInformation codeInfo)
+      throws DigaEncryptionException, DigaXmlWriterException, DigaCodeValidationException {
+    Mockito.when(codeInfo.getInsuranceCompanyIKNumber()).thenReturn("IK123456789");
+    Mockito.when(codeInfo.getClearingCenterIKNumber()).thenReturn("IK123456789");
   }
 }
